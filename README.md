@@ -18,8 +18,8 @@ third-party apps either lack the new sharing features or overwhelm users with lo
 This application focuses on making the trade-matching process faster and easier. Users
 can list two categories of cards:
 
-1. List cards they can trade or willing to give up
-2. List cards they want or looking to collect
+1. List cards they can trade or are willing to give up
+2. List cards they want or are looking to collect
 
 The website automatically compares these lists between users to identify possible trades. The
 system then shows the potential matches on a single, simple page, including usernames, friend
@@ -34,15 +34,15 @@ The main goal is not to build a complex marketplace, but a clean, minimal web ap
 -   **API Routes**
 -   **MongoDB**
 -   **TCGdex API** (`https://api.tcgdex.net/v2/en/series/tcgp`)
-    -   Card images, names, IDs, and rarity information were accessed through multiple endpoints (From series to sets then individual cards)
+    -   Card images, names, IDs, and rarity information were accessed through multiple endpoints (From series to sets, then individual cards)
 
 ### Features
 
 -   User can register an account with a username, password, and friend code
--   Data is fetch from external API endpoint and store in the MongoDB database to improve proformance (fetches and stores ~2000 cards locally)
--   Search and filter features can be used to search for specific cards by its name
+-   Data is fetched from an external API endpoint and stored in the MongoDB database to improve performance (fetches and stores ~2000 cards locally)
+-   Search and filter features can be used to search for specific cards by their name
 -   User may add/remove cards to "Can Trade" and "Want" lists
--   Profile page displays user's "Can Trade" and "Want" lists
+-   Profile page displays the user's "Can Trade" and "Want" lists
 -   Replaced card rarity in text with Emojis (Diamond 🔶, Star ⭐, Shiny ✨, Crown 👑)
 
 ### What is Incomplete
@@ -58,7 +58,7 @@ IRON_PASS = this_is_my_long_32_char_crazy_password
 MONGODB_URI = [Your MongoDB connection string]
 ```
 
-In the project's directory, install dependncies:
+In the project's directory, install dependencies:
 
 ```env
 npm i
@@ -70,7 +70,7 @@ Run the program:
 npm run dev
 ```
 
-## 📸 Screenshots
+## Screenshots
 
 ![alt text](image.png)
 ![alt text](image-1.png)
