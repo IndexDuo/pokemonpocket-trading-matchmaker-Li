@@ -1,5 +1,3 @@
-//pages\profile.jsx
-
 import Head from "next/head";
 import Link from "next/link";
 import styles from "../styles/Favorites.module.css";
