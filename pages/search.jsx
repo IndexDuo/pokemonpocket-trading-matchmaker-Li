@@ -53,17 +53,12 @@ export default function Search(props) {
     const [userCanTradeCards, setUserCanTradeCards] = useState([]);
     const [userWantCards, setUserWantCards] = useState([]);
     const inputRef = useRef();
-    const inputDivRef = useRef();
 
     useEffect(() => {
         async function fetchAllCards() {
             setFetching(true);
             try {
                 const res = await fetch("/api/cards/all");
-                if (!res.ok) {
-                    throw new Error("Failed to fetch cards");
-                }
-
                 const data = await res.json();
 
                 const cardsWithEmoji = data.map((card) => ({
