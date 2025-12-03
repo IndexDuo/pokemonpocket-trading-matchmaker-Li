@@ -1,16 +1,21 @@
-import User from '../models/user'
-import { normalizeId, dbConnect } from './util'
+import User from "../models/user";
+import { normalizeId, dbConnect } from "./util";
 
-export async function create(username, password) {
-  if (!(username && password))
-    throw new Error('Must include username and password')
+export async function create(username, password, friendCode) {
+    if (!(username && password && friendCode))
+        throw new Error("Must include username, password, and fiend code");
 
-  await dbConnect()
+    await dbConnect();
 
-  const user = await User.create({username, password})
+    const user = await User.create({
+        username,
+        password,
+        friendCode,
+        canTradeCards: [],
+        wantCards: [],
+    });
 
-  if (!user)
-    throw new Error('Error inserting User')
+    if (!user) throw new Error("Error inserting User");
 
-  return normalizeId(user)
+    return normalizeId(user);
 }

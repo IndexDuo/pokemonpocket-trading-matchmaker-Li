@@ -1,0 +1,78 @@
+.preview {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 225px;
+    height: 100%;
+    box-sizing: border-box;
+    text-align: center;
+    border: 1px solid #666;
+    padding: 10px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: color 200ms;
+    color: var(--text);
+    box-sizing: border-box;
+    perspective: 800px;
+}
+
+.username {
+    margin: 0;
+}
+
+.friendCode {
+    color: #272174ff;
+    font-size: 0.8rem;
+}
+
+.rows {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    flex-direction: column;
+    gap: 2px;
+}
+
+.cardUI {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2px;
+}
+
+.tradeCardBox {
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    padding: 2px;
+    border-radius: 5px;
+    border: 1px solid #eeeeeeff;
+    background: #f9fbfaff;
+}
+
+.cardImage {
+    width: 40px;
+    height: auto;
+    border-radius: 4px;
+}
+
+.cardText {
+    display: flex;
+    flex-direction: column;
+}
+
+.cardName {
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.cardId {
+    font-size: 0.7rem;
+    color: #686868ff;
+}
+
+.cardRarity {
+    font-size: 0.8rem;
+}
